@@ -15,9 +15,11 @@ This is a part of my **portfolio project** targeting **Google ML/AI roles** and 
 **Kaggle Plant Disease Dataset (38 Classes)**  
 [Download from Kaggle](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset/data)  
 
+The dataset directory for the current setup is - (project root)/dataset/(kaggle dataset)
+
 - Total training images: `70,295`  
 - Total validation images: `17,572`  
-- 38 total classes including multiple diseases per crop and healthy samples.
+- 38 total classes, including multiple diseases per crop and healthy samples.
 
 > Due to size restrictions, the dataset is **not included** in this repository.  
 > Please **download it manually** from the Kaggle link above and place the folders as shown below:
