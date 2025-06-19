@@ -7,8 +7,6 @@
 # Plant Disease Classification using CNN & Transfer Learning (MobileNetV2)
 This project focuses on building a **high-performance image classification model** that can accurately detect **38 types of plant diseases** (including healthy classes) using images of plant leaves. The model achieves **96% accuracy** and a **Macro F1-score of 0.96** using **transfer learning** with **MobileNetV2** — optimized for deployment on edge devices or mobile.
 
-This is a part of my **portfolio project** targeting **Google ML/AI roles** and reflects a production-ready deep learning pipeline.
-
 ---
 
 ## Dataset
