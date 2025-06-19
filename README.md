@@ -1,3 +1,9 @@
+[![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blueviolet)](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset/data)
+[![Model: MobileNetV2](https://img.shields.io/badge/Model-MobileNetV2-brightgreen)](https://arxiv.org/abs/1801.04381)
+[![Framework: TensorFlow](https://img.shields.io/badge/Framework-TensorFlow-orange)](https://www.tensorflow.org/)
+[![Accuracy: 96%](https://img.shields.io/badge/Accuracy-96%25-success)](#-results)
+[![F1 Score: 0.96](https://img.shields.io/badge/Macro%20F1--Score-0.96-blue)](#-results)
+
 # Plant Disease Classification using CNN & Transfer Learning (MobileNetV2)
 This project focuses on building a **high-performance image classification model** that can accurately detect **38 types of plant diseases** (including healthy classes) using images of plant leaves. The model achieves **96% accuracy** and a **Macro F1-score of 0.96** using **transfer learning** with **MobileNetV2** — optimized for deployment on edge devices or mobile.
 
