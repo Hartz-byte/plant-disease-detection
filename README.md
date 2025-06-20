@@ -1,8 +1,8 @@
 [![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blueviolet)](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset/data)
 [![Model: MobileNetV2](https://img.shields.io/badge/Model-MobileNetV2-brightgreen)](https://arxiv.org/abs/1801.04381)
 [![Framework: TensorFlow](https://img.shields.io/badge/Framework-TensorFlow-orange)](https://www.tensorflow.org/)
-[![Accuracy: 96%](https://img.shields.io/badge/Accuracy-96%25-success)](#-results)
-[![F1 Score: 0.96](https://img.shields.io/badge/Macro%20F1--Score-0.96-blue)](#-results)
+[![Accuracy: 97%](https://img.shields.io/badge/Accuracy-97%25-success)](#-results)
+[![F1 Score: 0.97](https://img.shields.io/badge/Macro%20F1--Score-0.97-blue)](#-results)
 
 # Plant Disease Classification using CNN & Transfer Learning (MobileNetV2)
 This project focuses on classifying **plant diseases** using **Transfer Learning** with **MobileNetV2**. It leverages a high-quality, real-world image dataset and trains a robust CNN pipeline capable of accurately classifying **38 plant disease classes**.
