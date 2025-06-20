@@ -5,7 +5,7 @@
 [![F1 Score: 0.96](https://img.shields.io/badge/Macro%20F1--Score-0.96-blue)](#-results)
 
 # Plant Disease Classification using CNN & Transfer Learning (MobileNetV2)
-This project focuses on building a **high-performance image classification model** that can accurately detect **38 types of plant diseases** (including healthy classes) using images of plant leaves. The model achieves **96% accuracy** and a **Macro F1-score of 0.96** using **transfer learning** with **MobileNetV2** — optimized for deployment on edge devices or mobile.
+This project focuses on classifying **plant diseases** using **Transfer Learning** with **MobileNetV2**. It leverages a high-quality, real-world image dataset and trains a robust CNN pipeline capable of accurately classifying **38 plant disease classes**.
 
 ---
 
@@ -23,9 +23,14 @@ This project focuses on building a **high-performance image classification model
 > The dataset directory for the current setup is - (project root)/dataset/(kaggle dataset)
 
 ---
+## Project Pipeline
 
-## Model Architecture
+### 1. **Image Preprocessing**
+- Real-time data augmentation using `ImageDataGenerator`
+- Techniques: rotation, zoom, and horizontal flipping
+- Input resolution: `224x224`
 
+### 2. **Model Architecture**
 This project uses **Transfer Learning** with the pretrained **MobileNetV2** architecture. Here's the breakdown:
 
 - **Base Model**: `MobileNetV2` (ImageNet weights, `include_top=False`)
@@ -35,7 +40,9 @@ This project uses **Transfer Learning** with the pretrained **MobileNetV2** arch
   - `Dense(128, ReLU)`
   - `Dense(38, Softmax)` – final classification layer
 
-The base model's weights are **frozen** initially to train the custom top layers efficiently, and can be later unfrozen for fine-tuning if needed.
+### 3. Transfer Learning Process
+- Phase 1: Base model frozen — trained only top layers
+- Phase 2: Last 30 layers unfrozen — fine-tuned entire model
 
 ---
 
@@ -57,16 +64,25 @@ The base model's weights are **frozen** initially to train the custom top layers
 
 | Metric                  | Score |
 |-------------------------|-------|
-| **Validation Accuracy** | 96.0% |
-| **Macro F1-Score**      | 0.96  |
-| **Loss**                | ↓ 0.12 |
+| **Validation Accuracy** | 97.72% |
+| **Macro F1-Score**      | 0.9771  |
+| **Validation Loss**     | 0.0664 |
 | **Model**               | Saved as `.keras` |
 
 ---
 
-## Outputs
+## Results
+- Excellent generalization
+- Very high per-class precision & recall
+- Strong performance on both disease & healthy samples
+- Clean confusion matrix
 
-All trained artifacts and evaluation results are stored in the `outputs/` folder:
+---
+
+## Outputs
+- outputs/saved_model/best_model.keras
+- Confusion Matrix plot
+- Accuracy & Loss Curves
 
 ---
 
@@ -75,8 +91,8 @@ All trained artifacts and evaluation results are stored in the `outputs/` folder
 | True Label             | Predicted Label         | Confidence (%) |
 |------------------------|-------------------------|----------------|
 | Apple___Apple_scab     | Apple___Apple_scab      | 100.0          |
-| Apple___Apple_scab     | Apple___Apple_scab      | 99.98          |
-| Apple___Apple_scab     | Apple___Apple_scab      | 96.04          |
+| Apple___Apple_scab     | Apple___Apple_scab      | 100.0          |
+| Apple___Apple_scab     | Apple___Apple_scab      | 100.0          |
 
 ---
 
