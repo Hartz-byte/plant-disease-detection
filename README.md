@@ -43,12 +43,6 @@ This project uses **Transfer Learning** with the pretrained **MobileNetV2** arch
 ### 3. Transfer Learning Process
 - Phase 1: Base model frozen — trained only top layers
 - Phase 2: Last 30 layers unfrozen — fine-tuned entire model
-
----
-
-## Training Pipeline
-
-- **Data Augmentation**: `rotation_range=20`, `zoom_range=0.2`, `horizontal_flip=True`
 - **Optimizer**: Adam
 - **Loss Function**: Categorical Crossentropy
 - **Batch Size**: 32
